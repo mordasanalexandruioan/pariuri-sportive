@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -14,7 +16,9 @@
     <div class="container">
         <header>
 
-            <div class="background-header"></div>
+            <div class="background-header">
+                <h1>Extra<span>bet</span></h1>
+            </div>
 
             <div class="content-header">
                 <nav>
@@ -22,7 +26,7 @@
                     <li><a href="#">casino</a></li>
                     <li><a href="#">live casino</a></li>
                     <li><a href="#">bingo</a></li>
-                    <li><a href="#">bingo</a></li>
+
                 </nav>
             </div>
 
@@ -45,38 +49,42 @@
 
                     <tbody>
                         <tr>
-                            <th scope="row">Real Madrid</th>
-                            <td>2-1</td>
+                            <div class="bet-team">
+                                <th scope="row">Real Madrid</th>
+                            </div>
+
+                            <td class="score"></td>
+
                             <td>Manchester United</td>
                         </tr>
 
                         <tr>
                             <th scope="row">Barcelona</th>
-                            <td>0-1</td>
+                            <td class="score"></td>
                             <td>Manchester City</td>
                         </tr>
 
                         <tr>
                             <th scope="row">Lion</th>
-                            <td>4-2</td>
+                            <td class="score"></td>
                             <td>Bayern Munchen</td>
                         </tr>
 
                         <tr>
                             <th scope="row">Ajax</th>
-                            <td>1-3</td>
+                            <td class="score"></td>
                             <td>PSG</td>
                         </tr>
 
                         <tr>
                             <th scope="row">Juventus</th>
-                            <td>5-2</td>
+                            <td class="score"></td>
                             <td>Dinamo</td>
                         </tr>
 
                         <tr>
                             <th scope="row">U Cluj</th>
-                            <td>0-0</td>
+                            <td class="score"></td>
                             <td>Viitorul</td>
                         </tr>
                     </tbody>
@@ -96,5 +104,6 @@
 </body>
 
 <script src="functions.js"></script>
+<script src="extrabet.js"></script>
 
 </html>

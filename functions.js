@@ -24,6 +24,15 @@ function calculateAmount(cota, leftTeam, rightTeam) {
 
 }
 
-function stringToArray(numbers) {
-    return numbers.split(",").map(e => +e);
+
+function displayTableScore(leftTeam, rightTeam) {
+    let text = ``;
+    for (let i = 0; i < leftTeam.length; i++) {
+        for (let j = 0; j < rightTeam.legth; j++) {
+            text += `
+            
+            <p>${leftTeam[i]}-${rightTeam[j]}</p>`
+        }
+    }
+    return text;
 }
