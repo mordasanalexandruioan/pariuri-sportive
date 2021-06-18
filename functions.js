@@ -16,6 +16,14 @@ function generateScoreRightSide() {
     return v;
 }
 
+function generateTeamLeftSide() {
+    return v = ['Real Madrid', 'Dortmund', 'Barcelona', 'U Cluj', 'Ajax', 'Lion'];
+}
+
+function generateTeamRightSide() {
+    return v = ['Juventus', 'Dinamo', 'Manchester City', 'PSG', 'Bayern Munchen', 'Amsterdam'];
+}
+
 function isWin(leftTeam, rightTeam) {
     return leftTeam[0] > rightTeam[0];
 }
@@ -25,14 +33,17 @@ function calculateAmount(cota, leftTeam, rightTeam) {
 }
 
 
-function displayTableScore(leftTeam, rightTeam) {
+function addScore(leftTeam, leftTeamScore, rightTeam, rightTeamScore) {
     let text = ``;
-    for (let i = 0; i < leftTeam.length; i++) {
-        for (let j = 0; j < rightTeam.legth; j++) {
-            text += `
-            
-            <p>${leftTeam[i]}-${rightTeam[j]}</p>`
-        }
+    for (let i = 0; i < leftTeamScore.length; i++) {
+        text += `
+        <div class="table-row">
+            <div class="left-team">${leftTeam[i]}</div>
+            <div class="score">${leftTeamScore[i]}-${rightTeamScore[i]}</div>
+            <div class="right-team">${rightTeam[i]}</div>
+        </div>
+            `
     }
+
     return text;
 }

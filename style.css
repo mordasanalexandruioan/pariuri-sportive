@@ -40,6 +40,7 @@ main {
     overflow: hidden;
     padding-left: 0.4em;
     color: rgb(168, 246, 144);
+    height: 100%;
 }
 
 .background-header span {
@@ -53,8 +54,8 @@ main {
     position: absolute;
     width: 200px;
     height: 200px;
-    top: 20%;
-    left: 55%;
+    top: 45px;
+    right: -50px;
     z-index: 2;
     transform: rotate(10deg);
 }
@@ -65,8 +66,8 @@ main {
     width: 100%;
     height: 155px;
     position: absolute;
-    top: -20%;
-    left: 20%;
+    top: -10%;
+    right: -70px;
     z-index: 1;
     transform: scale(0.7);
 }
@@ -80,35 +81,14 @@ a {
 .tabel-meciuri {
     margin-top: 0.86em;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-}
-
-table,
-thead {
-    background-color: rgb(240, 240, 240);
-}
-
-table {
-    border-collapse: collapse;
-}
-
-tbody th,
-tbody td {
-    background-color: rgb(245, 245, 245);
-    padding: 0.32em;
-    text-align: center;
-    font-weight: 400;
-}
-
-tbody tr:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 1px 2px rgb(90, 90, 90);
-}
-
-td {
-    min-width: 45px;
+    text-align: left;
+    min-width: 300px;
+    width: 100%;
+    max-width: 485px;
 }
 
 main {
@@ -116,4 +96,74 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.table-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: rgb(231, 231, 231);
+    width: 100%;
+}
+
+.table-title {
+    width: 100%;
+    background-color: rgb(197, 197, 197);
+    padding: 0.3em;
+    border-bottom: solid 2px black;
+}
+
+.table-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: solid 2px black;
+}
+
+.score {
+    text-align: center;
+    padding: 0.3em;
+}
+
+.right-team {
+    text-align: right;
+}
+
+.left-team,
+.right-team {
+    padding: .3em;
+    width: 35%;
+}
+
+@media (min-width:500px) {
+    header {
+        font-size: 1.6rem;
+        height: 35vh;
+    }
+    h1 {
+        font-size: 5rem;
+        margin-top: 0;
+    }
+    .table-content {
+        font-size: 2rem;
+    }
+    .table-title {
+        font-size: 2.3rem;
+    }
+    .tabel-meciuri {
+        max-width: 650px;
+    }
+    .background-header:before {
+        top: 155px;
+        width: 250px;
+        height: 250px;
+    }
+    .background-header:after {
+        top: 50px;
+        height: 280px;
+    }
 }

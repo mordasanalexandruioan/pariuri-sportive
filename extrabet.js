@@ -1,10 +1,11 @@
-let team = prompt("Echipa pe care pariati:");
+// let team = prompt("Echipa pe care pariati:");
 
-let table = document.querySelector('.score');
+let table = document.querySelector('.table-content');
+
+let leftTeam = generateTeamLeftSide();
+let leftTeamScore = generateScoreLeftSide();
+let rightTeam = generateTeamRightSide();
+let rightTeamScore = generateScoreRightSide();
 
 
-
-let leftTeam = generateScoreLeftSide();
-let rightTeam = generateScoreRightSide();
-
-table.innerHTML = displayTableScore(leftTeam, rightTeam);
+table.innerHTML = addScore(leftTeam, leftTeamScore, rightTeam, rightTeamScore);
