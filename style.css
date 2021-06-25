@@ -60,18 +60,6 @@ main {
     transform: rotate(10deg);
 }
 
-.background-header:after {
-    content: '';
-    background: url(img/background-gate.png) no-repeat center/cover;
-    width: 100%;
-    height: 155px;
-    position: absolute;
-    top: -10%;
-    right: -70px;
-    z-index: 1;
-    transform: scale(0.7);
-}
-
 a {
     text-decoration: none;
     text-transform: uppercase;
@@ -79,7 +67,7 @@ a {
 }
 
 .tabel-meciuri {
-    margin-top: 0.86em;
+    margin: 0.86em auto 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -93,9 +81,7 @@ a {
 
 main {
     min-height: calc(100vh - 161.5px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 0 .3em;
 }
 
 .table-content {
@@ -105,6 +91,7 @@ main {
     align-items: center;
     background-color: rgb(231, 231, 231);
     width: 100%;
+    text-transform: capitalize;
 }
 
 .table-title {
@@ -137,6 +124,15 @@ main {
 .right-team {
     padding: .3em;
     width: 35%;
+}
+
+.win,
+.lose {
+    text-align: center;
+}
+
+.win span {
+    text-transform: capitalize;
 }
 
 @media (min-width:500px) {

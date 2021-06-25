@@ -28,6 +28,16 @@ function isWin(leftTeam, rightTeam) {
     return leftTeam[0] > rightTeam[0];
 }
 
+function displayWin(chosenTeam, scoreLeft, scoreRight) {
+    let text = `<h3><span>${chosenTeam}</span>, pariata de tine a invis cu scorul de ${scoreLeft[0]} la ${scoreRight[0]}</h3>`;
+    return text;
+}
+
+function displayLose() {
+    let text = `<h3>Ne pare rau, echipa pariata de tine nu a castigat..</h3>`;
+    return text;
+}
+
 function calculateAmount(cota, leftTeam, rightTeam) {
 
 }
